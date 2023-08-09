@@ -1,27 +1,51 @@
 const ProductList = [
   {
     id: "1",
-    title: "product",
-    price: 100,
-    image: "/images/product.jpg",
+    title: "ایرپادز",
+    price: 199,
+    image: "/images/airpods.jpg",
   },
   {
     id: "2",
-    title: "product",
-    price: 100,
-    image: "/images/product.jpg",
+    title: "آیپد",
+    price: 499,
+    image: "/images/ipad.jpg",
   },
   {
     id: "3",
-    title: "product",
-    price: 100,
-    image: "/images/product.jpg",
+    title: "مک‌بوک",
+    price: 1999,
+    image: "/images/macbook.jpg",
   },
   {
     id: "4",
-    title: "product",
-    price: 100,
-    image: "/images/product.jpg",
+    title: "آیفون",
+    price: 899,
+    image: "/images/phone.jpg",
+  },
+  {
+    id: "5",
+    title: "هدفون",
+    price: 599,
+    image: "/images/headphone.jpg",
+  },
+  {
+    id: "6",
+    title: "ماوس",
+    price: 299,
+    image: "/images/mouse.jpg",
+  },
+  {
+    id: "7",
+    title: "اپل واچ",
+    price: 499,
+    image: "/images/watch.jpg",
+  },
+  {
+    id: "8",
+    title: "میکروفون",
+    price: 699,
+    image: "/images/mic.jpg",
   },
 ];
 
