@@ -54,6 +54,7 @@ const Navbar = () => {
             ) : (
               <h3 className="mb-4">سبد خرید خالی است</h3>
             )}
+            <h3>مجموع قیمت: {carts.getTotalAmount()}</h3>
             <Button
               onClick={handleCloseModal}
               variant="btn btn-outline-secondary"
