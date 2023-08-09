@@ -1,4 +1,4 @@
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Form, Row, Col } from "react-bootstrap";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
@@ -24,7 +24,36 @@ function ProductItem({ product }) {
         </Card.Text>
         {productQuantity > 0 ? (
           <>
-            <div className="text-white">test</div>
+            <Form as={Row}>
+              <Form.Label column="true" sm="6" className="text-white">
+                تعداد :{productQuantity}
+              </Form.Label>
+              <Col sm="6">
+                <Button
+                  onClick={() => carts.addItemToCart(product.id)}
+                  sm="6"
+                  className="mx-2 text-white"
+                  variant="btn btn-outline-secondary"
+                >
+                  +
+                </Button>
+                <Button
+                  onClick={() => carts.removeItemFromCart(product.id)}
+                  sm="6"
+                  className="mx-2 text-white"
+                  variant="btn btn-outline-secondary"
+                >
+                  -
+                </Button>
+              </Col>
+            </Form>
+            <Button
+              onClick={() => carts.deleteFromCart(product.id)}
+              className="my-4"
+              variant="btn btn-light"
+            >
+              حذف از سبد خرید
+            </Button>
           </>
         ) : (
           <Button
