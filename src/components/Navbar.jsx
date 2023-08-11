@@ -19,6 +19,20 @@ const Navbar = () => {
     setShowModal(false);
   };
 
+  async function checkout() {
+    const response = await fetch("http://localhost:3000/api", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: carts.items }),
+    });
+
+    const data = await response.json();
+
+    if (data.url) {
+      window.location.assign(data.url);
+    }
+  }
+
   return (
     <>
       <NavbarBS className="border-bottom border-secondary">
@@ -50,11 +64,14 @@ const Navbar = () => {
                     quantity={item.quantity}
                   ></CartProduct>
                 ))}
+                <h3>مجموع قیمت: {carts.getTotalAmount()}</h3>
               </>
             ) : (
               <h3 className="mb-4">سبد خرید خالی است</h3>
             )}
-            <h3>مجموع قیمت: {carts.getTotalAmount()}</h3>
+            <Button className="mt-4" variant="btn btn-light" onClick={checkout}>
+              ثبت سفارش
+            </Button>
             <Button
               onClick={handleCloseModal}
               variant="btn btn-outline-secondary"
@@ -68,5 +85,4 @@ const Navbar = () => {
     </>
   );
 };
-
 export default Navbar;
