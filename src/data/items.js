@@ -2,25 +2,25 @@ const ProductList = [
   {
     id: "1",
     title: "ایرپادز",
-    price: 199,
+    price: 299,
     image: "/images/airpods.jpg",
   },
   {
     id: "2",
     title: "آیپد",
-    price: 499,
+    price: 4999,
     image: "/images/ipad.jpg",
   },
   {
     id: "3",
     title: "مک‌بوک",
-    price: 1999,
+    price: 19999,
     image: "/images/macbook.jpg",
   },
   {
     id: "4",
     title: "آیفون",
-    price: 899,
+    price: 49999,
     image: "/images/phone.jpg",
   },
   {
@@ -38,7 +38,7 @@ const ProductList = [
   {
     id: "7",
     title: "اپل واچ",
-    price: 499,
+    price: 2999,
     image: "/images/watch.jpg",
   },
   {
